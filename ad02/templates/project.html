@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="custom-div mt-4">
+	<h1>Project List</h1>
+	<p class="mb-4">This section showcases projects that I've done. These are mostly my personal projects that I build during my free time.</p>
+	<div class="list-group">
+		<a class="list-group-item list-group-item-action flex-column align-items-start" href="{% url 'home' %}">
+			<h3 class="link-color">This website (ND)</h3>
+			<h5>Description:</h5>
+			<p class="text-desc">This website is my online portfolio. I've build it solely for the purpose of showcasing my works to potential clients and employers.</p>
+			<h5>Type:</h5>
+			<p class="text-desc">Website portfolio</p>
+			<h5>Tech stack</h5>
+			<p class="text-desc">HTML5, CSS3, Bootstrap 4, Python, Django, sqlite3</p>
+		</a>
+		<a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+			<h3 class="link-color">Fond Figure</h3>
+			<h5>Description:</h5>
+			<p class="text-desc">Fond Figure is a blog that I code, write, run and maintain. The blog is where I write about various topics, ranging from general interests to science. Fond Figure was built using Django framework.</p>
+			<h5>Type:</h5>
+			<p class="text-desc">Blog</p>
+			<h5>Tech stack</h5>
+			<p class="text-desc">HTML5, CSS3, Bootstrap 4, Python, Django, PostgresSQL, Ckeditor 4</p>
+		</a>
+		<a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+			<h3 class="link-color">Data Visualization System</h3>
+			<h5>Description:</h5>
+			<p class="text-desc">Fond Figure is a blog that I code, write, run and maintain. The blog is where I write about various topics, ranging from general interests to science. Fond Figure was built using Django framework.</p>
+			<h5>Type:</h5>
+			<p class="text-desc">Blog</p>
+			<h5>Tech stack</h5>
+			<p class="text-desc">HTML5, CSS3, Bootstrap 4, Python, Django, PostgresSQL, Ckeditor 4</p>
+		</a>
+		<a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+			<h3 class="link-color">Customer Management System</h3>
+			<h5>Description:</h5>
+			<p class="text-desc">Fond Figure is a blog that I code, write, run and maintain. The blog is where I write about various topics, ranging from general interests to science. Fond Figure was built using Django framework.</p>
+			<h5>Type:</h5>
+			<p class="text-desc">Blog</p>
+			<h5>Tech stack</h5>
+			<p class="text-desc">HTML5, CSS3, Bootstrap 4, Python, Django, PostgresSQL, Ckeditor 4</p>
+		</a>
+		<a class="list-group-item list-group-item-action flex-column align-items-start" href="{% url 'subscribe_form' %}">
+			<h3 class="link-color">Landing Page</h3>
+			<h5>Description:</h5>
+			<p class="text-desc">A landing page is commonly used by enteprises as a sale funnel. It captures potential customers from various channel such as social media and search engine. This project demonstrates a landing page for a hypothetical company that sells cars.</p>
+			<h5>Type:</h5>
+			<p class="text-desc">Landing page, online form</p>
+			<h5>Tech stack</h5>
+			<p class="text-desc">HTML5, CSS3, Bootstrap 4, Python, Django, sqlite3</p>
+		</a>
+	</div>
+{% endblock %}
