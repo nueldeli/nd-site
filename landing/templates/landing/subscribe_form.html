@@ -1,11 +1,26 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-<div class="custom-div mt-4">
-	<form method="POST">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button class="btn btn-primary">Join</button>
-	</form>
+<div class="container mb-4 p-4 border shadow">
+	<div class="row">
+		<div class="col-sm-6">
+			<h1>Get the best value for your money</h1>
+			<p>Join our mailing list and get <strong>30% </strong>discount for every purchase.</p> 
+			<form method="POST">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<button class="btn btn-primary">Join Now</button>
+			</form>
+			</p>
+		</div>
+		<div class="col-sm-6">
+			<img class="w-100" src="{% static 'img/landing_img.jpg' %}">
+			<a href="https://png.pngtree.com/png-vector/20200310/ourmid/pngtree-online-education-training-course-design-concept-vector-illustration-png-image_2158408.jpg">
+				<small>Image source</small>
+			</a>
+		</div>
+	</div>
 </div>
 {% endblock %}

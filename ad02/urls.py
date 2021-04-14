@@ -23,5 +23,6 @@ urlpatterns = [
     path('project/', ProjectView.as_view(), name='project'),
     path('contact/', include('contact.urls')),
     path('landing/', include('landing.urls')),
+    path('cms/', include('cms.urls')),
     path('admin/', admin.site.urls),
 ]

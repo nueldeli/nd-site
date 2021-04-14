@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+	<h1 class="text-center">Customer Data Index</h1>
+	<div class="text-center mt-4">
+		<a href="{% url 'cms_form' %}">
+			<button class="btn btn-primary">Add customer</button>
+		</a>
+	</div>
+
+	<table class="table mt-4">
+		<thead class="thead-dark">
+			<tr>
+			<th scope="col">#</th>
+			<th scope="col">First name</th>
+			<th scope="col">Last name</th>
+			<th scope="col">Phone no.</th>
+			<th scope="col">Email</th>
+			<th scope="col">Status</th>
+		</tr>
+		</thead>
+		<tbody>
+			{% for data in object_list %}
+			<tr>
+				<th>{{ forloop.counter }}</th>
+				<td><a href="{% url 'cms_detail' data.pk %}">{{ data.customer_first_name }}</a></td>
+				<td>{{ data.customer_last_name }}</td>
+				<td>{{ data.customer_phone_no }}</td>
+				<td>{{ data.customer_email }}</td>
+				<td>{{ data.status }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}

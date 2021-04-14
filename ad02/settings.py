@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     # Landing
     'landing.apps.LandingConfig',
     # ---
+    # CMS
+    'cms.apps.CmsConfig',
+    # ---
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -146,3 +146,11 @@ nav a {
 .text-desc {
 	font-size: 16px;
 }
+
+.landing {
+	background-image: url(/static/img/landing_img.jpg);
+}
+
+.landing-heading {
+	color: #fff;
+}
