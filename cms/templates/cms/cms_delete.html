@@ -2,10 +2,12 @@
 
 {% block content %}
 <div class="custom-div-small mt-4 mb-4 border shadow p-4">
+	<h3 class="mb-4">Delete {{ object.customer_first_name }} {{ object.customer_last_name }}</h3>
+	
 	<form method="POST">
 		{% csrf_token %}
-		{{ form.as_p }}
-		<button class="btn btn-primary">Add</button>
+		<p>Are you sure?</p>
+		<button class="btn btn-danger">Delete</button>
 	</form>
 </div>
 {% endblock %}

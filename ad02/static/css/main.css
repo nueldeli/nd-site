@@ -6,6 +6,11 @@
 		width: 90%
 	}
 
+	.custom-div-small {
+		margin: auto;
+		width: 90%;
+	}
+
 	.jumbotron {
 		text-align: center;
 	}
@@ -26,6 +31,11 @@
 	.custom-div {
 		margin: auto;
 		width: 60%;
+	}
+
+	.custom-div-small {
+		margin: auto;
+		width: 40%;
 	}
 
 	.jumbotron {
@@ -97,7 +107,7 @@ nav a {
 }
 
 .text-muted {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .text-content img {

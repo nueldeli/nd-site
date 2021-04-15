@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="custom-div mb-4">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+	<h1 class="text-center mb-4">Customer Data Overview</h1>
+	<div class="border shadow p-4">
+		<h4 class="text-center">Number of customers and their buying status</h4>
+  		<canvas id="customerChart"></canvas>
+
+  		<small>Total number of customer:</small>
+  		<h4>{{ total_customer_number }}</h4>
+  		<hr>
+  		<ul class="list-unstyled">
+  			<li><small class="text-muted">CLOSED - The sale has been done. The customer has made the purchase</small></li>
+  			<li><small class="text-muted">ONGOING - The sale is being conducted but the customer has not made the purchase</small></li>
+  			<li><small class="text-muted">INTERESTED - The customer has yet to decide to make the purchase</small></li>
+  		</ul>
+	</div>
+
+	<div class="row mt-4 text-center">
+		<div class="col-sm-6 mb-2">
+			<a href="{% url 'cms_index' %}">
+				<button class="btn btn-primary">View all customer</button>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<a href="{% url 'cms_form' %}">
+				<button class="btn btn-primary">Add customer</button>
+			</a>
+		</div>
+	</div>
+
+	<hr>
+
+	<script >
+  
+	  var ctx = document.getElementById('customerChart').getContext('2d');
+	  var myChart = new Chart(ctx, {
+	      type: 'bar',
+	      data: {
+	          labels: [{% for i in label %}'{{ i }}',{% endfor %}],
+	          datasets: [{
+	              label: 'Number of customers',
+	              data: [{% for i in data %}'{{ i }}',{% endfor %}],
+	              backgroundColor: [
+	                  'rgba(228,27,199,1)',
+	                  'rgba(199,228,27,1)',
+	                  'rgba(27,199,228,1)',
+	              ],
+	              borderColor: [
+	                  'rgba(255, 99, 132, 0)',
+	                  'rgba(54, 162, 235, 0)',
+	                  'rgba(255, 206, 86, 0)',
+	              ],
+	              borderWidth: 1
+	          }]
+	      },
+	      options: {
+	          scales: {
+	              yAxes: [{
+	                  ticks: {
+	                      beginAtZero: true
+	                  }
+	              }],
+	              xAxes: [{
+	                  barPercentage: 0.3
+	              }]
+	          }
+	      }
+	  });
+
+</script>
+</div>
+{% endblock %}

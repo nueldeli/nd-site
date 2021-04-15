@@ -16,7 +16,7 @@ class CustomerData(models.Model):
 	date_enter = models.DateTimeField(auto_now_add=True)
 	customer_first_name = models.CharField(max_length=100)
 	customer_last_name = models.CharField(max_length=100)
-	customer_phone_no = models.IntegerField()
+	customer_phone_no = models.CharField(max_length=100)
 	customer_email = models.EmailField(max_length=100)
 	status = models.CharField(choices=STATUS_CHOICES, max_length=200, default=ONGOING)
 
