@@ -35,6 +35,13 @@ INSTALLED_APPS = [
     # Contact
     'contact.apps.ContactConfig',
     # ---
+    # Ckeditor
+    'ckeditor',
+    'ckeditor_uploader',
+    # ---
+    # Blog
+    'blog.apps.BlogConfig',
+    # ---
     # Landing
     'landing.apps.LandingConfig',
     # ---
@@ -129,3 +136,7 @@ USE_TZ = True
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'ad02/static')]
 STATIC_URL = '/static/'
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'ad02/media')
+MEDIA = '/media/'

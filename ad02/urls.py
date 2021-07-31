@@ -24,7 +24,9 @@ urlpatterns = [
 	path('about/', AboutView.as_view(), name='about'),
     path('project/', ProjectView.as_view(), name='project'),
     path('contact/', include('contact.urls')),
+    path('blog/', include('blog.urls')),
     path('landing/', include('landing.urls')),
     path('cms/', include('cms.urls')),
     path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
